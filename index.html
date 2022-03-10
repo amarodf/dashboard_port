@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- css -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!--Boxicons-->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!--Font Awesome Icons-->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!--ChartsJS-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <div id="header-nav">
+        <div class="container">
+        <!-- Small screen menu button -->
+            <a href="#menu" class="menu-link">
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
+            </a>
+        </div>   
+    </div>   
+
+    <nav class="sidebar close hidden">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="images\y-combinator-logo.png" alt="logo">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Dashboard</span>
+                    <span class="profession"> Portfolio</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bar-chart-alt-2 icon' ></i>
+                            <span class="text nav-text">Revenue</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Notifications</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-pie-chart-alt icon' ></i>
+                            <span class="text nav-text">Analytics</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-heart icon' ></i>
+                            <span class="text nav-text">Likes</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-wallet icon' ></i>
+                            <span class="text nav-text">Wallets</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- titulo mensagem boas vindas-->
+    <section class="home">
+
+        
+        <div class="welcome">
+            <div class="content">
+                <h1 class="">Bem-vindo</h1>
+                <p class="">Fiz esse dashboard responsivo com HTML, CSS e JS. </p>
+            </div>
+        </div>
+        <!-- cards analiticas -->
+
+        <main class="analytics">
+            <div class="card">
+                <i class='bx bxs-user bx-lg icon'></i>
+                <div class="content">
+                    <h1 class="">214.000</h1>
+                    <p class="mb-0">CAC </p>
+                </div>
+            </div>
+            <div class="card">
+                <i class='bx bx-money-withdraw bx-lg icon'></i>
+                <div class="content">
+                    <h1 class="">214.000</h1>
+                    <p class="mb-0">LTV</p>
+                </div>
+            </div>
+            <div class="card">  
+                <i class='bx bxs-offer bx-lg icon' ></i>
+                <div class="content">
+                    <h1 class="">214.000</h1>
+                    <p class="mb-0">Conv. Rate </p>
+                </div>
+            </div>
+            <div class="card">
+                
+                <i class='bx bxs-ghost bx-lg icon' ></i> 
+                <div class="content">
+                    <h1 class="">214.000</h1>
+                    <p class="mb-0">Churn Rate </p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Main Chart, Line Chart-->
+        <div class="main_chart">
+            <h1>Monthly Revenue</h1>    
+            <canvas id="myChart"  width="100" height="65"></canvas>
+        </div>
+
+        <!-- Secondary Charts, Donut and Bar Chart-->
+        <h1 class="rev_prod_title">Revenue per Product</h1>
+        <div class="second_charts">
+            <span>
+                <canvas  id="Donut" width="400" height="450"></canvas>
+            </span>
+            <span class="bar_chart">
+                <canvas  id="Columns" width="400" height="450"></canvas>
+            </span>
+        </div>
+        
+        
+    </section>
+    
+
+    <script src="index.js"></script>
+    
+</body>
+
+
+</html>
